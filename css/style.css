@@ -1,0 +1,513 @@
+@charset "utf-8";
+
+/* ===============================================
+共通のスタイリング
+=============================================== */
+:root {
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --key-color: #4CAF50;
+  --font-primary: #333333;
+  --font-secondary: #FFFFFF;
+  --bg-primary: #F0F0F0;
+  --bg-card: #e9f3e9;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: var(--font-primary);
+  line-height: 1.5;
+  background-color: var(--bg-primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container__common {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.btn {
+  font-weight: var(--font-weight-regular);
+  padding: 12px 30px 15px;
+  border-radius: 100px;
+  text-align: center;
+  display: inline-block;
+  transition: .3s;
+}
+
+/* 基本のボタン */
+.btn__primary {
+  background-color: var(--key-color);
+  color: var(--font-secondary);
+  padding: 12px 30px;
+  border-radius: 100px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.btn__primary:hover {
+  opacity: 0.8;
+  color: var(--font-primary);
+  transform: scale(1.05);
+}
+
+/* 反転ボタン */
+.btn__inverted {
+  background-color: var(--bg-card);
+  color: var(--key-color);
+  padding: 12px 30px;
+  border-radius: 100px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* バナーボタン */
+.banner__btn {
+  font-weight: var(--font-weight-regular);
+  display: inline-block;
+  background-color: var(--bg-card);
+  color: var(--key-color);
+  padding: 12px 30px;
+  border-radius: 100px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.banner__btn:hover {
+  background-color: var(--bg-primary);
+  color: var(--key-color);
+  transform: scale(1.05);
+}
+
+.text__highlight {
+  color: var(--key-color);
+}
+
+/* ===============================================
+ヘッダーのスタイリング
+=============================================== */
+.header {
+  padding: 19px 0;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.header__title  {
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+  color: var(--font-primary);
+}
+
+/* グローバルメニュー */
+.nav__list {
+  display: flex;
+  color: var(--font-primary);
+  font-size: 18px;
+  gap: 20px;
+}
+
+.nav__item a:hover {
+  color: var(--key-color);
+}
+
+.header__hamburger {
+  display: none;
+  font-size: 24px;
+  color: var(--font-primary);
+  background: none;
+  border: none;
+}
+
+
+/* ===============================================
+セクション共通スタイル
+=============================================== */
+.section {
+  padding: 58px 0 78px;
+}
+
+.section__title {
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+}
+
+.section__title span {
+  color: var(--key-color);
+}
+
+.section__subtitle {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  color: var(--key-color);
+  margin-bottom: 20px;
+}
+
+.section .text {
+  line-height: 1.8;
+}
+
+/* 
+キャリアセクション
+================================= */
+.career__section {
+  padding-bottom: 100px;
+}
+
+.career__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.career__col {
+  width: 46%;
+  margin-right: 20px;
+}
+
+.career__subtitle {
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.career__text {
+  margin-bottom: 2rem;
+}
+
+.career__img {
+  margin-top: 20px;
+  width: 80%;
+  height: auto;
+}
+
+/* 
+アバウトセクション
+================================= */
+.about__container {
+  max-width: 660px;
+  background-color: var(--bg-card);
+  border-radius: 20px;
+  padding: 59px 71px 74px;
+}
+.about__title {
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+}
+
+.about__heading {
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1.5rem;
+}
+
+/* 
+サービスセクション
+================================= */
+.service__title {
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+}
+
+.service__row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.service__col {
+  flex: 1;
+  margin: 0 10px;
+  max-width: 30%;
+}
+
+.service__img {
+  width: 80%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 4px 4px 15px var(--font-primary);
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.service__subtitle {
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+  margin: 15px 0;
+  text-align: center;
+}
+
+.service__description {
+  line-height: 1.6;
+}
+
+/* 
+ストーリーセクション
+================================= */
+.stories__row {
+  display: flex;
+  align-items: center;
+}
+
+.stories__col {
+  flex: 1;
+}
+
+.stories__image-col {
+  margin-right: 20px;
+}
+
+.stories__text-col {
+  max-width: 450px;
+}
+
+.stories__title {
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+}
+
+.stories__img {
+  width: 100%;
+  height: auto;
+}
+
+.stories__heading {
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+}
+
+.stories__text {
+  line-height: 1.6;
+}
+
+/* 
+バナーセクション
+================================= */
+.banner__section {
+  text-align: center;
+  margin-bottom: 57px;
+}
+
+.container__banner {
+  background-color: var(--key-color);
+  border-radius: 30px;
+  padding: 31px 0 40px;
+}
+
+.banner__title {
+  font-size: 30px;
+  font-weight: var(--font-weight-bold);
+  color: var(--bg-primary);
+  margin-bottom: 22px;
+}
+
+.banner__image {
+  max-width: 280px;
+  margin-bottom: 27px;
+}
+
+/* 
+フッターセクション
+================================= */
+.footer {
+  text-align: center;
+  padding: 20px 0 0;
+}
+
+.footer__logo {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+}
+
+.footer span {
+  color: var(--key-color);
+}
+
+.footer__copyright {
+  background-color: var(--key-color);
+  font-size: 14px;
+  color: var(--font-secondary);
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+}
+
+/* ===============================================
+レスポンシブのスタイリング
+=============================================== */
+@media screen and (max-width: 767px) {
+  /* ヘッダー */
+  .header__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 16px;
+  }
+
+  .header__title {
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  .header__hamburger {
+    display: block;
+  }
+
+  .nav__list {
+    display: none;
+  }
+
+  .header__hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav__list.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--font-secondary);
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .nav__item a {
+    color: var(--key-color);
+    padding: 10px;
+  }
+
+  /* セクション共通 */
+  .section {
+    padding: 0 0 90px 0;
+  }
+
+  /* キャリアセクション */
+  .career__row {
+    flex-direction: column;
+  }
+
+  .career__col {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .career__subtitle {
+    font-size: 24px;
+    margin: 20px auto;
+  }
+
+  .career__text {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .btn, .btn__primary {
+    margin-top: 10px;
+  }
+
+  .career__img {
+    margin-top: 20px;
+    height: auto;
+    max-width: 60%;
+  }
+
+  /* アバウトセクション */
+  .about__container {
+    padding: 24px;
+  }
+
+  /* サービスセクション */
+  .service__row {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .service__col {
+    max-width: 100%;
+    margin: 16px auto;
+    text-align: center;
+  }
+
+  .service__img {
+    width: 50%;
+    box-shadow: none;
+    height: auto;
+  }
+
+  .stories__section {
+    padding-bottom: 22px;
+  }
+
+  .service__description {
+    margin-bottom: 20px;
+  }
+
+  /* ストーリーズセクション */
+  .stories__row {
+    flex-direction: column;
+  }
+
+  .stories__col {
+    width: 100%;
+    text-align: center;
+  }
+
+  .stories__img {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .stories-col {
+    width: 100%;
+  }
+
+  .stories__text {
+    text-align: left;
+  }
+
+  .stories__name {
+    text-align: right;
+    margin-top: 10px;
+  }
+
+  /* バナーセクション */
+  .banner__section {
+    margin-bottom: 0px;
+  }
+
+  .container__banner {
+    padding: 24px 0;
+  }
+
+  .banner__title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .banner__image {
+    max-width: 200px;
+    margin-bottom: 16px;
+  }
+}
