@@ -20,7 +20,7 @@
 
 #### 左: PC 版 | 中央：タブレット版 | 右: スマホ版
 
-![デモサイトイメージ](./images/demo/service-lp-demo.png)
+![デモサイトイメージ](./images/demo/service_lp_demo.png)
 
 ## 機能
 
